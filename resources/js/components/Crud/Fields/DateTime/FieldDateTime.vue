@@ -53,7 +53,7 @@ export default {
         },
     },
     beforeMount() {
-        if (this.value) this.datetime = this.value;
+        this.setInitialValue();
 
         this.modelConfig.mask = this.field.mask || 'YYYY-MM-DD HH:mm:ss';
     },
@@ -70,6 +70,15 @@ export default {
                 mask: null,
             },
         };
+    },
+    methods: {
+        setInitialValue() {
+            if (this.value) {
+                this.datetime = this.value;
+            } else if (this.field.mode == 'time') {
+                this.datetime = 1;
+            }
+        },
     },
     computed: {
         attributes() {

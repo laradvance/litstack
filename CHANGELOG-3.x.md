@@ -1,15 +1,32 @@
 # Release Notes for 3.x
 
-## [Unreleased](https://github.com/litstack/litstack/compare/v3.4.4...3.x)
+## [Unreleased](https://github.com/litstack/litstack/compare/v3.4.5...3.x)
+
+### Fixed
+
+-   Fixed scrolling on mobile ([1f0513d](https://github.com/litstack/litstack/commit/1f0513d675d16629645f64cdff59bc37cb4adb87))
+
+## [v3.4.4](https://github.com/litstack/litstack/compare/v3.4.4...v3.4.5)
 
 ### Added
 
 -   Added `isoFormat` option to datetime field ([a48798c](https://github.com/litstack/litstack/commit/a48798ce6d781b2ad36ba8877c9a9fa9ee2c9795))
+-   Added `readOnly` for `boolean`, `radio` and `checkboxes`fields ([014ac13](https://github.com/litstack/litstack/commit/014ac13e5b6e723c489bec14453c2bf9294b1c88))
+-   Added `nowrap` table column option ([7c876b3](https://github.com/litstack/litstack/commit/7c876b39370d120c171d80c7ae26c5f19e6ab1ee))
 
 ### Fixed
 
 -   Fixed crud forms using union types ([ed16f23](https://github.com/litstack/litstack/commit/ed16f2347b84964d0e803bd4fe5eae86e9a67237))
 -   Fixed `date` column uses application timezone ([38420d6](https://github.com/litstack/litstack/commit/38420d63ee188e346888139a40c5f3afb8e00131))
+-   Fixed relation table `unlink` button ([73ecf04](https://github.com/litstack/litstack/commit/73ecf04603c9709af324fbf93c4b172a169542e7))
+-   Fixed empty `time` field not editable ([e4861a5](https://github.com/litstack/litstack/commit/e4861a5a33b7368d7b087966b8310dc4b3675c1d))
+-   Fixed empty `time` field not editable ([e4861a5](https://github.com/litstack/litstack/commit/e4861a5a33b7368d7b087966b8310dc4b3675c1d))
+-   Fixed `no items selected` for list field ([e4861a5](https://github.com/litstack/litstack/commit/e4861a5a33b7368d7b087966b8310dc4b3675c1d))
+-   Fixed `checkboxes` acting like `radio` ([e4334d4](https://github.com/litstack/litstack/commit/e4334d4b71dde9544e44729a4e1837d6c4752bf6))
+-   Fixed stacked `checkboxes` css ([c9ae4a7](https://github.com/litstack/litstack/commit/c9ae4a74265c2af02065a49e59e622f59850264a))
+-   Fixed view column returning view instad of column ([9c903f4](https://github.com/litstack/litstack/commit/9c903f438d1fb468b48fe0cadae6e49d13060fcb))
+-   Fixed empty avatare column is not rounded ([7cc6f1b](https://github.com/litstack/litstack/commit/7cc6f1bf0288a0479da5458ec61f46316cacb73c))
+-   Fixed alphabetic table order reversed ([589bba3](https://github.com/litstack/litstack/commit/589bba3f6cd2e72b446361d55992f70859bf4715))
 
 ### Changed
 
