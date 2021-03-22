@@ -1,6 +1,14 @@
 # Release Notes for 3.x
 
-## [Unreleased](https://github.com/litstack/litstack/compare/v3.5.0...3.x)
+## [Unreleased](https://github.com/litstack/litstack/compare/v3.5.1...3.x)
+
+-   Fixed select field background ([04dd7f1](https://github.com/litstack/litstack/commit/04dd7f1dc441d75a9e8c3fae2a7ae0658e156468))
+
+## [v3.5.1](https://github.com/litstack/litstack/compare/v3.5.0...v3.5.1)
+
+### Fixed
+
+-   Fixed relation link missing in relation table ([#180](https://github.com/litstack/litstack/pull/180))
 
 ## [v3.5.0](https://github.com/litstack/litstack/compare/v3.4.5...v3.5.0)
 
