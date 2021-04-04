@@ -67,6 +67,13 @@ export default {
             }),
         };
     },
+    beforeMount() {
+        Lit.bus.$on('eventHandled', ({event, response}) => {
+            if(!response.isAxiosError) {
+                this.$bvModal.hide(this.modalId);
+            }
+        });
+    },
     methods: {
         /**
          * Run.
@@ -79,7 +86,11 @@ export default {
             }
         },
 
-        runAction() {
+        async runAction(e) {
+            if(e) {
+                e.preventDefault();
+            }
+
             this.$emit('run', { attributes: this.attributes.attributes });
         },
 

@@ -2,6 +2,7 @@
 
 namespace Ignite\Page\Actions;
 
+use Ignite\Contracts\Page\FileDownloadAction;
 use Ignite\Page\RunActionEvent;
 use Ignite\Vue\Component;
 use Ignite\Vue\Traits\StaticComponentName;
@@ -17,6 +18,13 @@ class ActionComponent extends Component
      * @var string
      */
     protected $name = 'lit-action';
+
+    /**
+     * Action modal instance.
+     *
+     * @var ActionModal|null
+     */
+    protected $modal;
 
     /**
      * Event handlers.
@@ -66,6 +74,16 @@ class ActionComponent extends Component
 
         $this->setModal();
         $this->setAuthorization();
+    }
+
+    /**
+     * Get action modal instance.
+     *
+     * @return ActionModal|null
+     */
+    public function getModal()
+    {
+        return $this->modal;
     }
 
     /**
@@ -128,9 +146,9 @@ class ActionComponent extends Component
             return;
         }
 
-        $this->prop('modal', $modal = $this->newActionModal());
+        $this->prop('modal', $this->modal = $this->newActionModal());
 
-        $instance->modal($modal->title($this->title));
+        $instance->modal($this->modal->title($this->title));
     }
 
     /**
@@ -170,7 +188,13 @@ class ActionComponent extends Component
     {
         $this->throwIfHandlerIsNotValid($handler);
 
-        return $this->on('run', $handler);
+        $this
+            ->on('run', $handler)
+            ->isFileDownload(
+                is_subclass_of($this->action, FileDownloadAction::class)
+            );
+
+        return $this;
     }
 
     /**
