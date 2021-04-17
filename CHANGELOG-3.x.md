@@ -4,11 +4,13 @@
 
 ### Added
 
+- Global search 🔥 ([#196](https://github.com/litstack/litstack/pull/196))
 - Password reset ([0dedfd7](https://github.com/litstack/litstack/commit/0dedfd71de8843b6c3fc872a7b8bac8bf9fc4cb7))
 
 ### Fixed
 
 - Fixed sortable relations ([309a2c4](https://github.com/litstack/litstack/commit/309a2c49e401b70c0e532b44f6c0791837972fb6))
+- Fixed image cropper is throwing a vue error in reapeatables ([e689dd0](https://github.com/litstack/litstack/commit/e689dd0a74fc74c9189db9b34bf78d78c7c8989d))
 
 ## [v3.6.1](https://github.com/litstack/litstack/compare/v3.6.0...v3.6.1)
 
