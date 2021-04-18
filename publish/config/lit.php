@@ -120,6 +120,12 @@ return [
         'locales' => [
             'en',
             'de',
+            'fr',
+            'fa',
+            'pl',
+            'it',
+            'tr',
+            'es',
         ],
 
         'fallback_locale' => 'en',
